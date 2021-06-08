@@ -57,13 +57,45 @@ console.log(calcVolumeSphere(4) );
 */
 
 //understanding => arrow functions
-const name = "Jessie";
+/**const name = "Jessie";
 const greeting = () => alert(`Greetings, ${name}!`);
 
-// is the same as writing
+//is functionally equivalent to
 const name = "Jessie";
 const greeting = function () {
   alert(`Greetings, ${name}!`);
 }
 
+//another example is 
+const sayYay = function () {
+  return "Yay!";
+}
+//is functionally equivalent to
+const sayYay = () => "Yay!";
 
+
+function getArea(width, length, unit="inches") {
+  const area = width * length
+  return `${area}` ${unit}
+}
+
+getArea(4,5,undefined)
+*/
+
+
+/**<---Random Number Function--->
+*return a number between two numbers.
+* @ param {number} lower - the lowest number value.
+* @ param {number} upper -the highest number value.
+* @ return {number} the random number value.
+*/
+
+//Call the function and pass it different values.
+function getRandomNumber(lowNumber, highNumber) {
+  const randomNumber = Math.floor(Math.random() * (highNumber - lowNumber + 1)) + lowNumber;
+  return randomNumber;
+//OR return Math.floor(Math.random()*(highNumber-lowNumber +1)) + lowNumber;
+}
+console.log(getRandomNumber(1, 6));
+console.log(getRandomNumber(10, 100));
+console.log(getRandomNumber(200, 500));
